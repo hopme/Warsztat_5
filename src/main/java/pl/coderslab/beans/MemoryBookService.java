@@ -20,7 +20,7 @@ public class MemoryBookService {
                 "Cay Horstmann, Gary Cornell", "Helion", "programming"));
     }
     public List<Book> getList() {return list;}
-    public Book getBook(int bookId) {
+    public Book getBook(long bookId) {
         return list.stream().filter(s->s.getId() == bookId)
         .findFirst().get();
     }
@@ -29,5 +29,19 @@ public class MemoryBookService {
     public void addBook(Book book){
         book.setId(idCounter++);
         this.list.add(book);
+    }
+
+    public void deleteBook(long bookId) {
+        Book delBook = list.stream().filter(b -> b.getId() == bookId).findFirst().get();
+        list.remove(delBook);
+    }
+
+    public void editBook(Book book) {
+        Book editBook = list.stream().filter(b -> b.getId() == book.getId()).findFirst().get();
+        editBook.setIsbn(book.getIsbn());
+        editBook.setAuthor(book.getAuthor());
+        editBook.setPublisher(book.getPublisher());
+        editBook.setTitle(book.getTitle());
+        editBook.setType(book.getType());
     }
 }

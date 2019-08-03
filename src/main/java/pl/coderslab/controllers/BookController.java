@@ -26,7 +26,7 @@ public class BookController {
     }
 
     @RequestMapping("/{bookId}")
-    public Book showBook(@PathVariable int bookId){
+    public Book showBook(@PathVariable long bookId){
         return memoryBookService.getBook(bookId);
     }
 
@@ -37,5 +37,13 @@ public class BookController {
         memoryBookService.addBook(book);
     }
 
+    @DeleteMapping("/{bookId}")
+    public void deleteBook(@PathVariable long bookId){
+        memoryBookService.deleteBook(bookId);
+    }
 
+    @PutMapping("/")
+    public void editBook(@RequestBody Book book){
+        memoryBookService.editBook(book);
+    }
 }

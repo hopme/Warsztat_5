@@ -50,13 +50,13 @@ $(function(){
                 '<div class="card">' +
                 '<div class="card-header">' +
                 '<div class="row mb-0">' +
-                '<div class="col-10 book-title" data-url="/books/'+element.id+'" data-type="GET">' + element.title + '</div>' +
+                '<div class="col-10 book-title" data-url="books/'+element.id+'" data-type="GET">' + element.title + '</div>' +
                 '<div class="col-2"><button type="button" class="btn btn-danger book-delete" data-type="DELETE" data-url="/books/'+element.id+'">Usuń</button></div>' +
                 '</div>' +
                 '</div>' +
                 '<div class="collapse" style="display:none">' +
                 '<div class="card-body">' +
-                '<form class = "bookForm" data-url="/books/'+element.id+'" data-type="PUT">'+
+                '<form class = "bookForm" data-url="books/" data-type="PUT">'+
                 '<div class="form-group row"><label for="bookId" class="col-sm-2 col-form-label">id</label><div class="col-sm-3">'+
                 '<input type="text" readonly class="form-control" id="bookId" placeholder="bookId" name="id"></div></div>'+
                 '<div class="form-group row"><label for="bookIsbn" class="col-sm-2 col-form-label">isbn</label><div class="col-sm-3">'+
