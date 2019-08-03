@@ -11,7 +11,8 @@ $(function(){
         };
 
         if (arguments.length>0) {
-            startOption.url = "http://localhost:8080"+$(arguments[0]).data('url');
+            startOption.url = context+$(arguments[0]).data('url');
+            console.log(startOption.url);
             startOption.method = $(arguments[0]).data('type');
         }
         // zamiana tabeli na obiekt
@@ -33,6 +34,7 @@ $(function(){
     var formBook = $('#addBook');
     formBook.on('submit', function(e){
         e.preventDefault();
+        console.log(this);
         ajax(this,$(this).serializeArray());
         refreshBooks();
     });
