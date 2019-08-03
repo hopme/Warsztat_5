@@ -71,7 +71,7 @@
         <br><br>
         <h4 class="cover-heading">Dodaj książkę do listy </h4>
         <br>
-        <form id="addBook" data-url="/books/" data-type="POST">
+        <form id="addBook" data-url="books/" data-type="POST">
             <div class="form-group row">
                 <label for="isbn" class="col-sm-2 col-form-label">isbn</label>
                 <div class="col-sm-3">
