@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import pl.coderslab.beans.Book;
 import pl.coderslab.beans.MemoryBookService;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
